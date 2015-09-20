@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Largest Numbers in Arrays</title>
+    <meta name=" Adam Debbagh software Developer, USA" content=" Adam Debbagh software Developer, USA. Basic Algirithm Scripting in javascript"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="text-center">
+    <span class="small"><img src="https://yt3.ggpht.com/-lw8TrMQr0T8/AAAAAAAAAAI/AAAAAAAAAAA/z-3iSzGCpQg/s64-c-k-no/photo.jpglkgofo" class="img-rounded center-block" style="display: block;" alt="Adam debbagh photo">
+    By Adam Debbagh</span>
+        <h6>Web Developer </h6>
+        <h1 class="text-center">Return Largest Numbers in Arrays</h1><br>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h3>Basic Algorithm Scripting in javascript</h3>
+            <p><span class="bg-primary">Challenge</span>:  Return an array consisting of the largest number from each provided sub-array.</p>
+            <p>Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i] .</p>
+
+            <button class="btn btn-info"><a href="https://github.com/Adamdebbagh/-palindromes.git" target="_blank"><i class="fa fa-github-alt"></i> Fork it</a></button>
+        </div>
+        <!--Share buttons-->
+        <div id="share_box">
+            <p>Share this Challenge </p>
+            <!-- Twitter -->
+            <a onclick="javascript:window.open('http://twitter.com/share?text=https://d157rqmxrxj6ey.cloudfront.net/adamdebbagh/8904/', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+
+            <!-- Facebook -->
+            <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=https://d157rqmxrxj6ey.cloudfront.net/adamdebbagh/8904/', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+
+            <!-- Google Plus -->
+            <a onclick="javascript:window.open('https://plus.google.com/share?url=https://d157rqmxrxj6ey.cloudfront.net/adamdebbagh/8904/', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+        </div>
+    </div>
+
+    <!--Result-->
+    <div id="result" class="jumbotron jumbotron-fluid"></div>
+
+    <div id="largestNumber" class="jumbotron jumbotron-fluid"></div>
+
+    <!-- Array input form-->
+    <div class="row">
+        <div class="container-fluid">
+            <form id="target" class="" action="#">
+                <div class="col-xs-8 .col-sm-8 .col-md-10">
+                    <div class="form-group">
+                        <label for="inputArray" class="sr-only">Input Array</label>
+                        <input type="text" class="form-control" id="inputArray" placeholder="ex, [2,3,5]">
+                    </div>
+                </div>
+                <div class="col-xs-2 .col-md-2">
+                    <button type="submit" class="btn btn-primary">Add </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--View Code-->
+    <div class="container highlight" style="display: none">
+    <pre><code>
+        //find largest numbers of four sub-arrays
+        function largestOfFour(arr) {
+        var largestNum;
+        var largestNumArray = new Array();
+        //loop throu,find largest, push it to the new Array
+        for(var i = 0; i< arr.length ; i++){
+        largestNum = arr[i].sort(function(a,b){return b-a;}[0];
+        largestNumArray.push(largestNum);
+        }
+        return largestNumArray;
+        }
+        //run the function
+        largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+    </code></pre>
+    </div>
+
+    <h5 class="bg-info text-center showCode"> View Code</h5>
+    <h5 class="bg-info text-center showCode" style="display: none"> hide Code</h5>
+
+</div><!--//container-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
