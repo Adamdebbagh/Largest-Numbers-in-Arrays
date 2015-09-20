@@ -12,8 +12,9 @@ $("#target").submit(function(event){
     userInput = $("input").val();
     // check if user sends empty string
     if(userInput === ""){
+        $("#largestNumber").hide();
         $(".result").remove();
-        $("#result").fadeIn( "slow").append("<h3 class='text-center text-danger result'>" + "Please Enter an array like so : [[2,4,3],5,[6,3,7]]"+"</h3>");
+        $("#result").removeClass('summary').addClass('warning').fadeIn( "slow").append("<h3 class='text-center result'>" + "Enter arrays consecutively : [2,4,3] then press 'Add Array' button, then [6,3,7] and so on"+"</h3>");
 
     } else {
 
@@ -25,7 +26,7 @@ $("#target").submit(function(event){
         // Display the elements of the array
         $(".result").remove();
         $("#largestNumber").hide();
-        $("#result").fadeIn( "slow").append("<h5 class='text-center text-info result'>"+ "Your Array has ("+ data.length +") element(s): "+ "["+ data+"]"+"<br><br>" +"<button id='list' class='btn btn-block btn-info'>Show Result </button>"+ "</h5>");
+        $("#result").removeClass('warning').addClass('summary').fadeIn( "slow").append("<h5 class='text-center result'>"+ "Your Array has ("+ data.length +") element(s): "+"<br><br>"+ "[ "+ data+" ]"+"<br><br>" +"<button id='list' class='btn btn-block btn-info custom'><i class='fa fa-plus-square'></i> Show Result </button>"+ "</h5>");
     }//end else
 
 
@@ -48,7 +49,7 @@ $("#target").submit(function(event){
 
         // Display array of largest numbers
         $(".largestNumber").remove();
-        $("#largestNumber").fadeIn("slow").append("<h5 class='text-center text-info result largestNumber'>"+" largest numbers in your array :"+ "["+ largestNumArray+"]"+"</h5>");
+        $("#largestNumber").fadeIn("slow").append("<h5 class='text-center result largestNumber'>"+" largest numbers in your array : "+"<br><br>"+ "["+ largestNumArray+"]"+"</h5>");
     });
 
     event.preventDefault();
@@ -62,3 +63,10 @@ $(".showCode").click(function(){
     $( ".showCode" ).toggle( "slow");
 });
 
+//Blink text
+function blinker() {
+    $('.blink').fadeOut(1000);
+    $('.blink').fadeIn(1000);
+}
+
+setInterval(blinker, 5000);

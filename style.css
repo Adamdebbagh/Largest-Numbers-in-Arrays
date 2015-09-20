@@ -111,6 +111,7 @@ body {
 .jumbotron {
     background-color: #fff;
     color: lightslategray;
+    margin:0;
 }
 
 .highlight {
@@ -156,6 +157,45 @@ button a:hover {
     border-radius: 100%;
 }
 
+section {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.input-group {
+    margin: 20px auto;
+    width: 100%;
+}
+input.btn.btn-lg,
+input.btn.btn-lg:focus {
+    outline: none;
+    height: 60px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+button.custom {
+    width: 70%;
+    height: 60px;
+    border-radius: 0;
+}
+.promise {
+    color: red;
+}
+
+#largestNumber {
+    background-color: #4DAF7C;
+    color: #ffe23b;
+}
+.warning {
+    background-color: #D24D57;
+    color: #fff;
+}
+
+.summary {
+    background-color: #4B77BE;
+    color: #fff;
+    height: 12.4em;
+}
 
 
 
